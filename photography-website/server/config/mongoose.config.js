@@ -6,5 +6,5 @@ mongoose.connect("mongodb://localhost/" + dbName, {
         useUnifiedTopology: true
 
 })
-    .then(() => console.log("Established connection with "+ dbName))
-    .catch(err => console.log("Something wrong when connecting with " +dbName));
+        .then(() => console.log("Established connection with "+ dbName))
+        .catch(err => console.log("Something wrong when connecting with " +dbName));

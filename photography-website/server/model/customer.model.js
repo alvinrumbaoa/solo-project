@@ -7,7 +7,7 @@ const CustomerSchema = new mongoose.Schema({
         phone: {type: String},
         message: {type: String},
         theme: {type: String, 
-            ["Wedding","Newborn","Birthdays","Events","Modeling"]
+                    enum: ["Wedding","Newborn","Birthdays","Events","Modeling"]
         }
     
 },{timestamps: true});
