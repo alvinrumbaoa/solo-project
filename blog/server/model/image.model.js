@@ -7,4 +7,4 @@ const ImageSchema = new mongoose.Schema({
 },{timestamps: true});
 
 
-module.exports = mongoose.model("Image", ImageSchema);np
+module.exports = mongoose.model("Images", ImageSchema);
