@@ -8,4 +8,10 @@ module.exports = function(app) {
 	// get one Image
 	// create a param variable called "id"
     app.get("/api/images/:id", ImageController.getOneImage);
+		// update Image
+	app.put("/api/Images/:id", ImageController.updateImage);
+		// delete Image
+	app.delete("/api/Images/:id",  ImageController.deleteImage);
+	}
+	
 }

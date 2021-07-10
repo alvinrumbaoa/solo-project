@@ -41,3 +41,41 @@ module.exports.getAllImages =  (req, res)  => {
                 res.json(err);
             })
     };
+
+    
+    module.exports.updateImage = (req, res) => {
+        console.log("inside updateImage");
+        console.log(req.params.id);  // the document we need to update
+        console.log(req.body);       // the data we will be updating with
+
+        Images.findByIdAndUpdate(req.params.id, req.body, {
+            new: true,    // return the updated document instead of the original
+            runValidators: true  // validate the json data just like the create
+        })
+            .then((updatedCustomer) => {
+                console.log(updatedCustomer);
+                res.json(updatedCustomer);
+            })
+            .catch((err) => {
+                console.log(err);
+                res.json(err);
+            })
+    };
+    
+    // delete Image
+    module.exports.deleteImage = (req, res) => {
+        console.log("inside deleteImage");
+        console.log(req.params.id);
+    
+        Images.findByIdAndDelete(req.params.id)
+            .then((deletedImage) => {
+                // this is the deleted document....your last chance!!!
+                console.log(deletedImage);
+                res.json(deletedImage);
+            })
+            .catch((err) => {
+                console.log(err);
+                res.json(err);
+            })
+    };
+    

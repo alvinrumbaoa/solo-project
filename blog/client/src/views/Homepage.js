@@ -1,5 +1,6 @@
 import React ,{useState, useEffect} from 'react';
 import Navbar from '../components/Navbar';
+import Admin from '../components/Admin';
 import axios from 'axios';
 
 const Homepage = () =>{
@@ -21,16 +22,17 @@ const Homepage = () =>{
         <div className="homepage-container">
             <Navbar/>
             {
-                image.maps((img, index) =>{
+                image.map((image, index) =>{
 
                     return(
                         <div keys={index} className ="portrait-container">
-                            <img src={img.imgURL} alt="portraits"/>
+                            <img href={image.imgURL} alt="portrait"/>
                         </div>
                     )
                 })    
 
             }
+            <Admin/>
         </div>
     )
 }
