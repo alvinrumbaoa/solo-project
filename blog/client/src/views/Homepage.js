@@ -1,7 +1,8 @@
 import React ,{useState, useEffect} from 'react';
 import Navbar from '../components/Navbar';
-import Admin from '../components/Admin';
 import axios from 'axios';
+import {motion } from 'framer-motion';
+import {animationOne, transition} from "../animations/Animation";
 
 const Homepage = () =>{
     const [image, setImage] = useState([]);
@@ -19,21 +20,22 @@ const Homepage = () =>{
    }, [ ]);
 
     return(
-        <div className="homepage-container">
-            <Navbar/>
-            {
-                image.map((image, index) =>{
-
-                    return(
-                        <div keys={index} className ="portrait-container">
-                            <img href={image.imgURL} alt="portrait"/>
-                        </div>
-                    )
-                })    
-
-            }
-            <Admin/>
-        </div>
+            <div className="homepage-container">
+                 <Navbar/>
+                <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
+                 
+             
+                        
+                {
+                    image.map((image, index) =>{
+                        return(
+                                <img src={image.imgURL}  key={index}  alt="portrait" width="200" height="200"/>
+                        )
+                    })   
+                }
+                   </motion.div>
+            </div>
+     
     )
 }
 

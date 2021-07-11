@@ -9,9 +9,9 @@ module.exports = function(app) {
 	// create a param variable called "id"
     app.get("/api/images/:id", ImageController.getOneImage);
 		// update Image
-	app.put("/api/Images/:id", ImageController.updateImage);
+	app.put("/api/images/:id", ImageController.updateImage);
 		// delete Image
-	app.delete("/api/Images/:id",  ImageController.deleteImage);
+	app.delete("/api/images/:id",  ImageController.deleteImage);
 	}
 	
 }

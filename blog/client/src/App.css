@@ -4,38 +4,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@300&display=swap');
 body{
 
-  background-color: #cfaa87;
+  background-color: #976567;
   font-family: 'Encode Sans SC', sans-serif;
 
 }
 
+ h1{
+  text-shadow: #d59687 2px 5px;
+
+ }
 .nav-container{
   display:flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #be9f5f ;
- text-shadow: chocolate 2px 5px;
-padding: 10px;
+  background-color: #FBCCC1 ;
+  box-shadow: 2px 2px 6px 0px rgb(20, 17, 15);
+  padding: 20px;
 }
 
 .nav-links{
   display: flex;
   flex-direction: row;    
   align-items:center;
-
+  text-decoration: none;
 }
 
-button{
+p{
+  text-decoration: none;
   align-items:center;
   font-family: 'Encode Sans SC', sans-serif;
-  background-color: #c8a352;
-  color: black;
-  width: 100%;
-  height: 35%;
-  border-radius: 3px;
+  color: #924634;
+  margin: 5px;
 }
-button:hover {
-  box-shadow: 0 0 40px 40px  #BD9B30 inset;
+p:hover {
   opacity: 40%;
   cursor: pointer;
+}
+
+.homepage-container img {
+  border: 1px solid #ccc;
+  animation: fadeIn 3s;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  max-width: 100%;
+  margin: 20px;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+
+.link{
+  text-decoration: none;
+  color: #924634;
 }
