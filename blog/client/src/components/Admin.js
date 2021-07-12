@@ -14,6 +14,7 @@ const Admin = (props) =>{
         })
             .then((res) =>{
                 console.log(res.data);    
+                navigate("/home")
             })
             .catch(err => { 
                 console.log(err.response);
@@ -21,18 +22,6 @@ const Admin = (props) =>{
             })  
     }
 
-    const deleteHandler = (e, id) => {
-		e.preventDefault();
-
-		axios.delete("http://localhost:8000/api/images/" + id)
-			.then((res) => {
-				console.log(res.data);
-				afterDeleteHandler(id);  // unique things that the parent component wants to do now!
-			})
-			.catch((err) => {
-				console.log(err);
-			})
-	}
     
     return(
         <div className="homepage-container">
@@ -42,7 +31,7 @@ const Admin = (props) =>{
                                     <button type="submit">Upload</button>
                 </form>
 
-                <button className="deleteBtn" onClick={ (e) => deleteHandler(e, id) }>Delete Image</button>
+        
 	)
         </div>
     )

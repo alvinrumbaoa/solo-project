@@ -1,4 +1,4 @@
-const Images = require("../model/image.model");
+const Images = require("../model/images.model");
 
 module.exports.getAllImages =  (req, res)  => {
     console.log("get all Images");

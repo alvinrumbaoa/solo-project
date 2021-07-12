@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const dbName = "photoDB";
+const dbName = "photowebDB";
 
 mongoose.connect("mongodb://localhost/" + dbName, { 
         useNewUrlParser: true,

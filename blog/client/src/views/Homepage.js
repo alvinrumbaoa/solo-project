@@ -3,7 +3,8 @@ import Navbar from '../components/Navbar';
 import axios from 'axios';
 import {motion } from 'framer-motion';
 import {animationOne, transition} from "../animations/Animation";
-
+import DeleteImage from '../components/DeleteImage';
+import Admin from '../components/Admin';
 const Homepage = () =>{
     const [image, setImage] = useState([]);
 
@@ -19,6 +20,16 @@ const Homepage = () =>{
 
    }, [ ]);
 
+
+   const afterDelete =(deletedID) =>{
+    let  filterStateArray = image.filter((image) =>{
+
+        return image._id !== deletedID;
+    });
+    setImage(filterStateArray.sort());
+    };
+
+
     return(
             <div className="homepage-container">
                  <Navbar/>
@@ -27,15 +38,14 @@ const Homepage = () =>{
              
                         
                 {
-                    image.map((image, index) =>{
-                        return(
-                                <img src={image.imgURL}  key={index}  alt="portrait" width="200" height="200"/>
-                        )
-                    })   
+                    image.map((image, index) =>(
+               
+                                        <img src={image.imgURL}  key={index}  alt="portrait" width="300" height="300"/>
+                        ))   
                 }
                    </motion.div>
             </div>
-     
+            
     )
 }
 

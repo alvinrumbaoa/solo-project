@@ -1,4 +1,4 @@
-const ImagesController = require('../controller/image.controller');
+const ImagesController = require('../controller/images.controller');
 
 module.exports = function(app) {
 		// get all Images
