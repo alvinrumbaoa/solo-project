@@ -40,7 +40,7 @@ const Homepage = () =>{
                 {
                     image.map((image, index) =>(
                
-                                        <img src={image.imgURL}  key={index}  alt="portrait" width="300" height="300"/>
+                                        <img className="homepage-grid-image" src={image.imgURL}  key={index}  alt="portrait" width="500" height="500"/>
                         ))   
                 }
                    </motion.div>
