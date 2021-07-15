@@ -1,4 +1,9 @@
 import React, { useState} from 'react';
+import axios from 'axios';
+import  Navbar from "../components/Navbar";
+import {motion } from 'framer-motion';
+import {animationOne, transition} from "../animations/Animation";
+
 
 const ContactUsRegistered = (props) =>{
 

@@ -1,9 +1,11 @@
 import React ,{useState, useEffect} from 'react';
 import Navbar from '../components/Navbar';
 import axios from 'axios';
-import {motion } from 'framer-motion';
+import {Link} from '@reach/router'
+;import {motion } from 'framer-motion';
 import {animationOne, transition} from "../animations/Animation";
 import DeleteImage from '../components/DeleteImage';
+
 import Admin from '../components/Admin';
 const Homepage = () =>{
     const [image, setImage] = useState([]);
@@ -19,6 +21,9 @@ const Homepage = () =>{
             })
 
    }, [ ]);
+
+  
+
 
 
    const afterDelete =(deletedID) =>{
@@ -39,8 +44,9 @@ const Homepage = () =>{
                         
                 {
                     image.map((image, index) =>(
-               
+                        <Link to={"/images/" + image._id}>
                                         <img className="homepage-grid-image" src={image.imgURL}  key={index}  alt="portrait" width="500" height="500"/>
+                        </Link>
                         ))   
                 }
                    </motion.div>
