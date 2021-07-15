@@ -7,11 +7,17 @@ import DeleteImage from '../components/DeleteImage';
 import Admin from '../components/Admin';
 
 const Category = (props) => {
-    
+    const [title, setTitle] = useState(["Wedding","Newborn","Birthdays","Events","Modeling","Food Photography"])
 
     return (
         <div>
-                
+                {
+                    title.map((name, index) =>{
+                        <div className="categories" key={index}>
+                                {props.title}
+                        </div>       
+                    })
+                }
         </div>
     )
 }

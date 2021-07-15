@@ -2,13 +2,14 @@
   margin: 0px auto;
   box-sizing: border-box;
   padding: 0px;
-  /* border: solid 1px red; */
+  border: solid 1px red;
 }
 
 
 .App {
   text-align: center;
 }
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@300&display=swap');
 body{
   height: 100%;
@@ -17,6 +18,10 @@ body{
   background-size: cover;
   font-family: 'Encode Sans SC', sans-serif;
 
+}
+.brand{
+  font-family: 'Homemade Apple', cursive;
+  font-size: 3rem;
 }
 
  h1{
@@ -30,7 +35,7 @@ body{
   background-color: #FBCCC1 ;
   box-shadow: 2px 2px 6px 0px rgb(20, 17, 15);
   padding: 20px;
-  /* margin-bottom: 20px; */
+  margin-bottom: 20px;
 }
 
 .nav-links{
@@ -40,6 +45,11 @@ body{
   text-decoration: none;
   
 }
+.nav-links img:hover{
+  opacity: 95%;
+  box-shadow:  1px 1px 1px black;
+}
+
 
 p{
   text-decoration: none;
@@ -49,21 +59,21 @@ p{
   margin: 5px;
 }
 p:hover {
-  opacity: 40%;
+  opacity: 95%;
   cursor: pointer;
+  box-shadow:  1px 2px 1px black;
 }
 
 .homepage-container img {
-  border: 1px solid #ccc;
   animation: fadeIn 3s;
-  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
   max-width: 100%;
   margin: 10px;
 }
 
-.homepage-grid-image::hover {
-  opacity: 50%;
-
+.homepage-grid-image:hover {
+  opacity: 75%;
+  animation: fadeIn 3s;
+  box-shadow:  1px 2px 1px black;
 }
 
 
@@ -80,8 +90,6 @@ p:hover {
 
 .about-container{
     height: 100%;
-  
-  
 }
 
 .aboutmepic{
@@ -130,10 +138,6 @@ span{
 }
 
 
-.submit-btn{
-
-
-}
 
 
 .details{
