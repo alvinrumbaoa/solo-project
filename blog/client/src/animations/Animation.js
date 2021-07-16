@@ -18,9 +18,10 @@ export const animationTwo ={
         y: '-100vh',
         scale: 0.3
     }
-
 };
 
 export const transition = {
-    duration: 0.8
+    duration: 0.5
 }
+
+

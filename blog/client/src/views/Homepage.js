@@ -19,14 +19,10 @@ const Homepage = () =>{
             .catch((err) =>{
                 console.log(err);
             })
-
-   }, [ ]);
-
-  
+}, [ ]);
 
 
-
-   const afterDelete =(deletedID) =>{
+const afterDelete =(deletedID) =>{
     let  filterStateArray = image.filter((image) =>{
 
         return image._id !== deletedID;
@@ -37,19 +33,16 @@ const Homepage = () =>{
 
     return(
             <div className="homepage-container">
-                 <Navbar/>
-                <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
-                 
-             
-                        
-                {
-                    image.map((image, index) =>(
-                        <Link to={"/images/" + image._id}>
-                                        <img className="homepage-grid-image" src={image.imgURL}  key={index}  alt="portrait" width="500" height="500"/>
-                        </Link>
-                        ))   
-                }
-                   </motion.div>
+                <Navbar/>
+                    <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
+                        {
+                            image.map((image, index) =>(
+                                <Link to={"/images/" + image._id}>
+                                                <img className="homepage-grid-image" src={image.imgURL}  key={index}  alt="portrait" width="500" height="500"/>
+                                </Link>
+                                ))   
+                        }
+                    </motion.div>
             </div>
             
     )

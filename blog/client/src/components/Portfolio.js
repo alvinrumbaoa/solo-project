@@ -6,29 +6,54 @@ import {animationOne, transition} from "../animations/Animation";
 import { Link } from '@reach/router';
 
 const Portfolio= (props) => {
-    return (
-    
-            <div className="portfolio-container">
-                <Navbar/>
-                <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
-                    <h1>Portfolio</h1>     
-                    <div className="category-container">
-                        <Link to="/portfolio/events">
-                                <div className="cards">Events</div>
-                        </Link>
-                        <Link to="/portfolio/modeling">
-                                <div className="cards">Modeling</div>
-                        </Link>
-                        <Link to="/portfolio/newborn">
-                                <div className="cards">Newborn</div>
-                        </Link>
-                        <Link to="/portfolio/wedding">
-                                    <div className="cards">Wedding</div>
-                        </Link>
-                    </div>
-                </motion.div>
-            </div>
-    )
+        
+        
+        
+        
+        
+        
+        
+        
+        return (
+                <div className="portfolio-container">
+                        <Navbar/>
+                                <motion.div animate={{ scale: 1 }} transition={{ duration: 0.5 }}>
+                                <h1>Portfolio</h1>     
+                                <div className="category-container">
+                                        <Link to="/portfolio/events">
+                                        <motion.div  whileHover={{ scale: 1.1 }}  whileTap={{ scale: 0.9 }} >
+                                                <div className="cards">
+                                                Events
+                                                </div>
+                                        </motion.div>
+                                        </Link>
+                                        <Link to="/portfolio/modeling">
+                                        
+                                        <motion.div  whileHover={{ scale: 1.1 }}  whileTap={{ scale: 0.9 }} >
+                                                <div className="cards">
+                                                Modeling
+                                                </div>
+                                        </motion.div>
+                                
+                                        </Link>
+                                        <Link to="/portfolio/newborn">
+                                        <motion.div  whileHover={{ scale: 1.1 }}  whileTap={{ scale: 0.9 }} >
+                                                <div className="cards">
+                                                Newborn
+                                                </div>
+                                        </motion.div>
+                                        </Link>
+                                        <Link to="/portfolio/wedding">
+                                        <motion.div  whileHover={{ scale: 1.1 }}  whileTap={{ scale: 0.9 }} >
+                                                <div className="cards">
+                                                Wedding
+                                                </div>
+                                        </motion.div>
+                                        </Link>
+                                </div>
+                                </motion.div>
+                </div>
+        )
 }
 
 export default Portfolio;

@@ -18,7 +18,7 @@ module.exports.getAllBlogs = (req, res)  => {
         console.log(require);
         Blogs.create(req.body)
             .then((newBlog) => { 
-                    console.log(newBLog);
+                    console.log(newBlog);
                     res.json(newBlog);
             })
             .catch((err) =>{
