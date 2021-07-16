@@ -5,18 +5,19 @@ import {animationOne, transition} from "../animations/Animation";
 const Blog = (props) =>{
     const [blog, setBlog] = useState([]);
 
+
+    // title: {type: String},
+    // description: {type: String},
+    // content: {type: String},
+    // // coverArt: {type: String}
     return (
         <div className="blog-container">
-               <Navbar/>
+        <Navbar/>
             <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
-            <h1>Blogs</h1>
+                <h1>Blogs</h1>
             
-
-
-
             </motion.div>
             
-
         </div>
     )
 }

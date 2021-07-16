@@ -8,6 +8,10 @@ import ImageViewer from "./views/ImageViewer";
 import Portfolio from "./components/Portfolio";
 import { Router } from '@reach/router';
 import {motion } from 'framer-motion';
+import Events from './views/Events';
+import Wedding from './views/Wedding';
+import Newborn from './views/Newborn';
+import Modeling from './views/Modeling';
 import {animationOne, transition} from "./animations/Animation";
 import './App.css';
 
@@ -25,6 +29,10 @@ function App() {
             <Blog path="/blog"/>
             <ImageViewer path="/images/:id"/>
             <ContactUsRegistered path="/submitted"/>
+            <Events path="/portfolio/events"/>
+            <Wedding path="/portfolio/wedding"/>
+            <Newborn path="/portfolio/newborn"/>
+            <Modeling path="/portfolio/modeling"/>
         </Router>
       </motion.div>
     </div>
