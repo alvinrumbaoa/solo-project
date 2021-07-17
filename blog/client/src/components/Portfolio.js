@@ -23,15 +23,14 @@ const Portfolio= (props) => {
                                         <Link to="/portfolio/events">
                                         <motion.div  whileHover={{ scale: 1.1 }}  whileTap={{ scale: 0.9 }} >
                                                 <div className="cards">
-                                                Events
+                                                <h1>Events</h1>
                                                 </div>
                                         </motion.div>
                                         </Link>
                                         <Link to="/portfolio/modeling">
-                                        
                                         <motion.div  whileHover={{ scale: 1.1 }}  whileTap={{ scale: 0.9 }} >
                                                 <div className="cards">
-                                                Modeling
+                                                <h1>Models</h1>
                                                 </div>
                                         </motion.div>
                                 
@@ -39,14 +38,14 @@ const Portfolio= (props) => {
                                         <Link to="/portfolio/newborn">
                                         <motion.div  whileHover={{ scale: 1.1 }}  whileTap={{ scale: 0.9 }} >
                                                 <div className="cards">
-                                                Newborn
+                                                <h1>Newborn</h1>
                                                 </div>
                                         </motion.div>
                                         </Link>
                                         <Link to="/portfolio/wedding">
                                         <motion.div  whileHover={{ scale: 1.1 }}  whileTap={{ scale: 0.9 }} >
                                                 <div className="cards">
-                                                Wedding
+                                                <h1>Wedding</h1>
                                                 </div>
                                         </motion.div>
                                         </Link>

@@ -91,8 +91,23 @@ p:hover {
   animation: fadeIn 3s;
   box-shadow:  5px 10px 10px black;
 }
+.grid-images{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+.square-image{
+  animation: fadeIn 3s;
+  max-width: 100%;
+  margin: 10px;
+  object-fit: cover;
+}
 
+.big-text{
+  font-family: 'Encode Sans SC', sans-serif;
+  font-size: 100px;
+}
 @keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
@@ -117,6 +132,10 @@ p:hover {
   flex-wrap: wrap;
   height: 500px;
   justify-content:center;
+  text-decoration: none;
+}
+.categories-container{
+  height: 100vh;
 }
 
 .cards{
@@ -126,21 +145,23 @@ p:hover {
   align-items: center;
   justify-content:center;
   text-align: center;
-  box-shadow:  1px 1px 1px 1px black;
-  width: 40ch;
-  height: 20vh;
-  margin: 10px;
+  box-shadow: 5px 5px 5px 5px rgb(20, 17, 15);
+  width: 50ch;
+  height: 50vh;
+  margin: 20px;
+ 
 }
 
-.category-wrapper:hover{
-  opacity: 85%;
-  min-height: 100%;
-
-  flex-direction: row;
+.cards h1{
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #000;
 }
 
 .portfolio-container{
-  min-height: 100%;
+  min-height: 200vh;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -215,6 +236,7 @@ p:hover {
   flex-direction: column;
   justify-content: space-around;
   width: 50%;
+  margin: 20px;
 }
 .aboutmepic{
   object-fit: cover;

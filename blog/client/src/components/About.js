@@ -66,6 +66,8 @@ const About = (props) =>{
             </div>
             <div className="parallax"></div>
             <div className="image-shows"></div>
+            <div className="parallax"></div>
+            <div className="parallax"></div>
         </div>       
     )
 }
