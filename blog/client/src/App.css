@@ -1,17 +1,34 @@
-*{
-  margin: 0px auto;
+* {
+	vertical-align: baseline;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	font-size: 100%;
+
+	outline: 0;
+	padding: 0;
+	margin: 0;
   box-sizing: border-box;
-  padding: 0px;
-  /* border: solid 1px red; */
-}
+	border:1px solid red;
+	}
 
 
 .App {
   text-align: center;
+  justify-content:center;
+  align-items:center;
+  font-size: 100%;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+  
 }
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@300&display=swap');
 body{
+
   height: 100%;
   background-color: #D2A3A9;
   background-repeat: no-repeat;
@@ -35,10 +52,9 @@ body{
   background-color: #FBCCC1 ;
   box-shadow: 2px 2px 6px 0px rgb(20, 17, 15);
   padding: 20px;
-  margin-bottom: 20px;
 }
 
-.nav-links{
+.nav-links{ 
   display: flex;
   flex-direction: row;    
   align-items:center;
@@ -67,12 +83,13 @@ p:hover {
   animation: fadeIn 3s;
   max-width: 100%;
   margin: 10px;
+  object-fit: cover;
 }
 
 .homepage-grid-image:hover {
   opacity: 75%;
   animation: fadeIn 3s;
-  box-shadow:  1px 2px 1px black;
+  box-shadow:  5px 10px 10px black;
 }
 
 
@@ -87,66 +104,6 @@ p:hover {
   color: #924634;
 }
 
-.about-container{
-    height: 100%;
-}
-
-.aboutmepic{
-  margin: 20px;
-  width: 200px;
-  height: 200px;
-  border-radius:  50%;
-  box-shadow: 5px 5px 5px 5px rgb(20, 17, 15);
-}
-
-.big-text{
-  display: flex;
-  justify-content:center;
-  text-shadow: #d59687 2px 5px;
-  font-family: 'Encode Sans SC', sans-serif;
-  font-size: 100px;
-  font-style: normal;
-  font-weight: 700;
-}
-
-.paragraph{
-  font-size: 30px;
-}
-
-.parallax{
-  /* Full height */
-  height: 45vh;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("https://www.xmple.com/wallpaper/linear-pink-brown-gradient-1920x1080-c2-a0522d-ffb6c1-a-90-f-14.svg");
-
-}
-
-@media only screen and (max-device-width: 1366px) {
-  .parallax {
-    background-attachment: scroll;
-  }
-}
-
-
-span{
-  width:50%;
-}
-
-
-
-
-.details{
-  padding: 10px;
-  display: flex;
-  margin: 10px;
-  
-}
-
-
 .contact-us-container{
   display: flex;
   flex-direction: column;
@@ -155,20 +112,16 @@ span{
   padding: 20px;
   box-shadow:  1px 1px 1px 1px black;
 }
-
-
 .category-container{
-  margin-top:  30px;
-  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  height: 500px;
   justify-content:center;
-  text-align: center;s
-  height: 100%;
-
 }
 
 .cards{
-  display: grid;
-  grid-column: row;
+  display: flex;
+  flex-wrap: wrap;
   background-image: url("./image/blob-haikei.png");
   align-items: center;
   justify-content:center;
@@ -179,15 +132,159 @@ span{
   margin: 10px;
 }
 
-
-
 .category-wrapper:hover{
   opacity: 85%;
-  
+  min-height: 100%;
+
+  flex-direction: row;
 }
 
 .portfolio-container{
- 
-  flex-direction: center;
-  height: 100vh;
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
+
+.blog-cards{ 
+    align-items: center;
+    background-color: #FBCCC1;
+    margin: 3rem;
+    width: 75%;
+    padding: 3rem;
+    border-radius: 3rem;
+    box-shadow: 10px 10px 5px #d59687;
+}
+.blog-cards img{
+    display: flex;
+    flex-direction: flex-start;
+    width: 35%;
+    height: 35%;
+}
+
+/* About me page */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+.wrapper{
+    background: linear-gradient(90deg, #FFE7E2, #d59687);
+    min-height: 100%;
+    display:flex;
+    box-shadow: 5px 5px 5px 5px rgb(20, 17, 15);
+    margin-bottom: 45px;
+}
+
+.sub-wrapper{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  background-color: #d59687;
+  box-shadow: 5px 5px 5px 5px rgb(20, 17, 15);
+  min-height: 100%;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.sub-container{
+  display:flex;
+  flex-direction: row;
+}
+/* 
+.sub-wrapper2{
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: #d59687;
+  box-shadow: 5px 5px 5px 5px rgb(20, 17, 15);
+  min-height: 90%;
+  border-radius: 20px;
+} */
+
+
+.left{
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+  justify-content: center;
+  align-items:center;
+  width: 50%;
+}
+
+.right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50%;
+}
+.aboutmepic{
+  object-fit: cover;
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  border-radius:  30%;
+  box-shadow: 5px 5px 5px 5px rgb(20, 17, 15);
+  }
+  .aboutmepic2{
+    margin-left: 15rem;
+    object-fit: cover;
+    margin: 10rem, 10rem, 10rem, 0rem;
+    width: 300px;
+    height: 300px;
+    border-radius:  30%;
+    box-shadow: 5px 5px 5px 5px rgb(20, 17, 15);
+    }
+
+.parallax{
+  /* Full height */
+  height: 45vh;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+.main-text{
+text-shadow: #d59687 2px 5px;
+font-family: 'Montserrat', sans-serif;
+font-size: 80px;
+font-style: normal;
+
+}
+
+.sub-text,.sub-text h2{
+  display: flex;
+  text-shadow: #d59687 2px 5px;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-shadow: #d59687 2px 5px;
+  font-family: 'Karla', sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+  align-items:center;
+}
+
+.info, p{
+  margin: 10px;
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+}
+
+.sub-image{
+ 
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin: 20px;
+
+}
+/* About me page */

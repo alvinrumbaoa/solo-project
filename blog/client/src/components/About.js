@@ -1,59 +1,72 @@
 import React, { useState} from 'react';
 import  Navbar from "./Navbar";
-import {motion } from 'framer-motion';
+import {motion ,useViewportScroll} from 'framer-motion';
 import {Link, navigate } from '@reach/router';
-import {animationOne, animationTwo, transition} from "../animations/Animation";
+import { animationTwo, transition,transition2,transition3} from "../animations/Animation";
 
 
 const About = (props) =>{
-
+    const { scrollYProgress } = useViewportScroll()
 
     return (
         <div className="about-container">
             <Navbar/>
-
-            <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
+            <motion.path d="M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0" style={{ pathLength: scrollYProgress }}/>
+            <div className="wrapper">
+                <div className="left">
+                    <h2 className="main-text">Hello!My Name is Maica Rumbaoa. </h2> 
+                    <h3 className="sub-text">I am a photographer.</h3>
+                    <h4 className="info">"Me and my husband bring this idea and talent to bring a great look at your memories that will look up for many years. We serviced Orange County are but also flexible to any county around SoCal. We do photgraphy for Newborn, Maternity, Weddings and other. If you are ready to work with us. <Link to="/contactus">Let's get started"</Link></h4>
+                </div>    
+                <div className="right">
+        
+                <img className="aboutmepic" src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.18169-9/29497967_10216645405114604_6658147382127119149_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=174925&_nc_ohc=o1DkJnuXSL0AX8Iap2I&_nc_ht=scontent-lax3-1.xx&oh=fb2a6648e26b5df7322f0b2598e574bf&oe=60F8748A" alt="about me"/> 
+                <img className="aboutmepic2" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/144390730_10226200545547143_7644850727001613204_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=ZIimvcULwloAX-kCJka&_nc_ht=scontent-sjc3-1.xx&oh=abc053fa605f8d4c78d65d16e9552c5d&oe=60F21934" alt="about me"/>  
+                </div>
+            </div>
+            <div className="sub-container">
+                    <motion.div initial="out" animate="in" exit="out" variants={animationTwo} transition={transition}>
+                    <div className="sub-wrapper">
+                            <img className="sub-image" src="images/girl-and-camera-1447940.png" alt="about me"/> 
+                            <div className="sub-text">
+                            <h2>morbi tincidunt</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Libero nunc consequat interdum varius sit amet mattis vulputate enim.</p>
+                            </div>       
+                    </div>    
+                    </motion.div>
+                    <div className="parallax"></div> 
+                    <motion.div initial="out" animate="in" exit="out" variants={animationTwo} transition={transition2}>
+                    <div className="sub-wrapper">
+                            <img className="sub-image" src="images/social-media-marketing-1447950.png" alt="about me"/> 
+                            <div className="sub-text">
+                            <h2>morbi sed viverra ipsum</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Libero nunc consequat interdum varius sit amet mattis vulputate enim.</p>
+                            </div>
+                    </div>   
+                    </motion.div>
+                    <div className="parallax"></div> 
+                    <motion.div initial="out" animate="in" exit="out" variants={animationTwo} transition={transition3}>
+                    <div className="sub-wrapper">
+                            <img className="sub-image" src="images/team-solving-problems-1447933.png" alt="about me"/> 
+                            <div className="sub-text">
+                            <h2> lorem Ipsum ven detta</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Libero nunc consequat interdum varius sit amet mattis vulputate enim.</p>
+                            </div>
+                    </div>    
+                    </motion.div>
+                    <motion.div initial="out" animate="in" exit="out" variants={animationTwo} transition={transition3}>
+                    <div className="sub-wrapper">
+                            <img className="sub-image" src="images/woman-explaining-business-graph-1447944.png" alt="about me"/> 
+                            <div className="sub-text">
+                            <h2> lorem Ipsum ven detta</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id eu nisl nunc mi ipsum faucibus vitae aliquet. Libero nunc consequat interdum varius sit amet mattis vulputate enim.</p>
+                            </div>
+                    </div>    
+                    </motion.div>
+            </div>
             <div className="parallax"></div>
-            <div className="glassmorp">
-                    <img className="aboutmepic" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/144390730_10226200545547143_7644850727001613204_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=ZIimvcULwloAX-kCJka&_nc_ht=scontent-sjc3-1.xx&oh=abc053fa605f8d4c78d65d16e9552c5d&oe=60F21934" alt="about me"/>
-                    <p className="big-text">My Name is Maica Rumbaoa. </p>
-                <div className="details">
-                      <span className="paragraph">"I am a photographer. Me and my husband bring this idea and talent to bring a great look at your memories that will look up for many years. We serviced Orange County are but also flexible to any county around SoCal. We do photgraphy for Newborn, Maternity, Weddings and other. If you are ready to work with us. <Link to="/contactus">Let's get started" </Link></span>
-                </div>
-
-                 <div className="parallax">
-
-                 </div>
-            </div>
-           
-            <div className="glassmorp">
-                 <motion.div initial="out" animate="in" exit="out" variants={animationTwo} transition={transition}>
-                    <img className="aboutmepic" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/144390730_10226200545547143_7644850727001613204_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=ZIimvcULwloAX-kCJka&_nc_ht=scontent-sjc3-1.xx&oh=abc053fa605f8d4c78d65d16e9552c5d&oe=60F21934" alt="about me"/>
-                    <p className="big-text">My Name is Maica Rumbaoa. </p>
-                <div className="details">
-                      <span className="paragraph">"I am a photographer. Me and my husband bring this idea and talent to bring a great look at your memories that will look up for many years. We serviced Orange County are but also flexible to any county around SoCal. We do photgraphy for Newborn, Maternity, Weddings and other. If you are ready to work with us. <Link to="/contactus">Let's get started" </Link></span>
-                </div>
-
-                 <div className="parallax">
-                    
-                 </div>
-                 </motion.div>
-            </div>
-      
-            <div className="glassmorp">
-                    <img className="aboutmepic" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/144390730_10226200545547143_7644850727001613204_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=ZIimvcULwloAX-kCJka&_nc_ht=scontent-sjc3-1.xx&oh=abc053fa605f8d4c78d65d16e9552c5d&oe=60F21934" alt="about me"/>
-                    <p className="big-text">My Name is Maica Rumbaoa. </p>
-                <div className="details">
-                      <span className="paragraph">"I am a photographer. Me and my husband bring this idea and talent to bring a great look at your memories that will look up for many years. We serviced Orange County are but also flexible to any county around SoCal. We do photgraphy for Newborn, Maternity, Weddings and other. If you are ready to work with us. <Link to="/contactus">Let's get started" </Link></span>
-                </div>
-
-                 <div className="parallax">
-                    
-                 </div>
-            </div>
-            </motion.div>
-
-        </div>
+            <div className="image-shows"></div>
+        </div>       
     )
 }
 
