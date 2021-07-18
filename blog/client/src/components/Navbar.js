@@ -11,8 +11,8 @@ const Navbar = () =>{
                 </Link>
                         <div className="nav-links">
                             <Link to="/home" className="link">
-                                    <img src="/images/home.png" alt="home" width="50" height="50"/>
-                                    <p>Home</p> 
+                                <img src="/images/home.png" alt="home" width="50" height="50"/>
+                                <p>Home</p> 
                             </Link>
                             <Link to="/about" className="link">
                             <img src="/images/info.png" alt="about" width="50" height="50"/>

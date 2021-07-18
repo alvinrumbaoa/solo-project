@@ -24,6 +24,10 @@
 	margin: 0;
   
 }
+h1{
+  text-shadow: #d59687 2px 5px;
+
+ }
 @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@300&display=swap');
@@ -41,10 +45,7 @@ body{
   font-size: 3rem;
 }
 
- h1{
-  text-shadow: #d59687 2px 5px;
 
- }
 .nav-container{
   display:flex;
   flex-direction: row;
@@ -130,34 +131,37 @@ p:hover {
 .category-container{
   display: flex;
   flex-wrap: wrap;
-  height: 500px;
   justify-content:center;
   text-decoration: none;
+
 }
 .categories-container{
   height: 100vh;
 }
 
 .cards{
+  position: static;
   display: flex;
   flex-wrap: wrap;
-  background-image: url("./image/blob-haikei.png");
   align-items: center;
   justify-content:center;
   text-align: center;
   box-shadow: 5px 5px 5px 5px rgb(20, 17, 15);
-  width: 50ch;
-  height: 50vh;
-  margin: 20px;
- 
+  width: 30ch;
+  height: 30vh;
+  margin: 20px; 
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 200%;
 }
 
-.cards h1{
+.cards>h2{
   font-family: 'Karla', sans-serif;
-  font-size: 20px;
+  font-size: 50px;
   font-weight: 500;
-  text-decoration: none;
-  color: #000;
+  color: rgb(221, 197, 197);
+  text-shadow: #cc644a 2px 3px;
 }
 
 .portfolio-container{
