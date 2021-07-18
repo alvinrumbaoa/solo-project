@@ -13,6 +13,7 @@ import Wedding from './views/Wedding';
 import Newborn from './views/Newborn';
 import Modeling from './views/Modeling';
 import Food from './views/Food';
+import ViewOneBlog from './views/ViewOneBlog';
 import {animationOne, transition} from "./animations/Animation";
 import './App.css';
 
@@ -35,6 +36,7 @@ function App() {
             <Newborn path="/portfolio/newborn"/>
             <Modeling path="/portfolio/modeling"/>
             <Food path="/portfolio/food"/>
+            <ViewOneBlog path="/blogs/:id"/>
         </Router>
       </motion.div>
     </div>

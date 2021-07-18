@@ -36,9 +36,10 @@ const ContactUs = (props) =>{
         <div className="contact-container">
                     <Navbar/>
             <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
-            <div className="contact-us-container">
-                    <h1>Contact Us</h1>
-                    <img src="/images/camera.png" alt ="camera"/>
+    
+                 <div className="contact-us-container">
+                    <h1 className="big-text">Let's Make it Happen </h1>
+                    <img src="/images/camera 3.png" alt ="camera" width="300/" height="300"/>
                     <form onSubmit={onSubmitHandler}>
                         <p>Name:</p> <input type="text" name="name"  onChange={(e) => setName(e.target.value)}/>
                         <p>Email:</p>  <input type="text" name="email"  onChange={(e) => setEmail(e.target.value)}/>
@@ -56,20 +57,23 @@ const ContactUs = (props) =>{
                         <br/>
                         <input className="submit-btn" type="submit" value="Submit"/>
                     </form> 
-                                            
+                    <h4 className="sub-text">Follow Us:</h4>           
                     <div className="social-media">
-                        <h4>Follow Us:</h4> 
+                        <motion.div  whileHover={{ scale: 1.1 }}  whileTap={{ scale: 0.9 }} >
                         <img src="/images/facebook.png" alt="" height="100" width="100"/>
+                        </motion.div>
+                        <motion.div  whileHover={{ scale: 1.1 }}  whileTap={{ scale: 0.9 }} >
                         <img src="/images/pinterest.png" alt="" height="100" width="100"/>
+                        </motion.div>                            
+                        <motion.div  whileHover={{ scale: 1.1 }}  whileTap={{ scale: 0.9 }} >
                         <img src="/images/instagram.png" alt="" height="100" width="100"/>
+                        </motion.div>
+                        <motion.div  whileHover={{ scale: 1.1 }}  whileTap={{ scale: 0.9 }} >
                         <img src="/images/twitter (1).png" alt="" height="100" width="100"/>
+                        </motion.div>
                     </div>
-
-            </div>
-            
-                                    
-            </motion.div>
-             
+                    </div>           
+            </motion.div>     
 
         </div>
     )

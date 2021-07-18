@@ -19,9 +19,7 @@ const About = (props) =>{
                     <h4 className="info">"Me and my husband bring this idea and talent to bring a great look at your memories that will look up for many years. We serviced Orange County are but also flexible to any county around SoCal. We do photgraphy for Newborn, Maternity, Weddings and other. If you are ready to work with us. <Link to="/contactus">Let's get started"</Link></h4>
                 </div>    
                 <div className="right">
-        
-                <img className="aboutmepic" src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.18169-9/29497967_10216645405114604_6658147382127119149_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=174925&_nc_ohc=o1DkJnuXSL0AX8Iap2I&_nc_ht=scontent-lax3-1.xx&oh=fb2a6648e26b5df7322f0b2598e574bf&oe=60F8748A" alt="about me"/> 
-                <img className="aboutmepic2" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/144390730_10226200545547143_7644850727001613204_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=ZIimvcULwloAX-kCJka&_nc_ht=scontent-sjc3-1.xx&oh=abc053fa605f8d4c78d65d16e9552c5d&oe=60F21934" alt="about me"/>  
+                    <img className="aboutmepic2" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/144390730_10226200545547143_7644850727001613204_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=ZIimvcULwloAX-kCJka&_nc_ht=scontent-sjc3-1.xx&oh=abc053fa605f8d4c78d65d16e9552c5d&oe=60F21934" alt="about me"/>  
                 </div>
             </div>
             <div className="sub-container">

@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 import axios from 'axios';
 import {Link} from '@reach/router'
 ;import {motion } from 'framer-motion';
-import {animationOne, transition} from "../animations/Animation";
+import {animationOne,animationTwo, transition} from "../animations/Animation";
 import DeleteImage from '../components/DeleteImage';
 
 import Admin from '../components/Admin';
@@ -34,12 +34,14 @@ const afterDelete =(deletedID) =>{
     return(
             <div className="homepage-container">
                 <Navbar/>
-                    <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
+                    <motion.div initial="out" animate="in" exit="out" variants={animationTwo} transition={transition}>
                         {
-                            image.map((image, index) =>(
+                            
+                            image.map((image, index) =>(       
                                 <Link to={"/images/" + image._id}>
-                                                <img className="homepage-grid-image" src={image.imgURL}  key={index}  alt="portrait" width="500" height="500"/>
-                                </Link>
+                                    <img className="homepage-grid-image" src={image.imgURL}  key={index}  alt="portrait" width="400" height="400"/>
+    
+                                </Link>   
                                 ))   
                         }
                     </motion.div>

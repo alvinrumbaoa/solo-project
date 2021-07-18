@@ -23,21 +23,28 @@ const Blog = (props) =>{
     return (
         <div className="blog-container">
         <Navbar/>
-            <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
-                <h1>Blogs</h1>
-                {
-                    blog.map((post, index) => (
-                            <div className="blog-cards" key={index} >
-                            <Link to="/blogs/">
-                                    <img src={post.coverArt} alt="cover-Art" /> 
-                                    <h2 >{post.title}</h2>
-                                    <h4>{post.description}</h4>
-                            </Link>
-                            </div>
-                    ))
-                }
-            </motion.div>
-            
+        <h1 className="big-text">Blogs</h1>
+            <div className="blog-wrapper">
+            <div className="blog-wrapper">
+                <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
+                    
+                    {
+                        blog.map((post, index) => (
+                                <div className="blog-cards" key={index} >
+                                <Link to={"/blogs/" + post._id} className="link">
+                                        <img className="blog-image" src={post.coverArt} alt="cover-Art" />
+                                        <hr/> 
+                                        <h2 className="blog-sub-text" >{post.title}</h2>
+                                        <hr/> 
+                                        <h4 className="blog-info">{post.description}</h4>
+                                </Link>
+                                </div>
+                        ))
+                    }
+                </motion.div>
+                </div> 
+                
+            </div> 
         </div>
     )
 }
