@@ -12,7 +12,8 @@ const CustomerSchema = new mongoose.Schema({
                 match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
         },
         phone: {type: String,
-                required: [true, 'Customer  phone number required']
+                required: [true, 'Customer  phone number required'],
+                minLemght: [10, "phone number should be more than 10"]
         },
         message: {type: String,
                 required: [true, "Name Requied"],

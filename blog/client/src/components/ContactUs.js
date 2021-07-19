@@ -6,6 +6,7 @@ import {motion } from 'framer-motion';
 import {navigate} from '@reach/router';
 import {animationOne, transition} from "../animations/Animation";
 const ContactUs = (props) =>{
+
     const [errors, setErrors] = useState([]);
     const [name, setName]  = useState("");
     const [email, setEmail] = useState("");
@@ -22,14 +23,13 @@ const ContactUs = (props) =>{
             message, message,
             theme: theme,
         })
-            .then((response) =>{
-                console.log(response.data); 
-                navigate("/submitted")
-                return <ContactUsRegistered name={name}/>;
-            })
-            .catch((err) => { 
-                console.log(err);
-            }) 
+        .then((res) =>{
+            console.log(res.response.data.errors);    
+        })
+        .catch(err => { 
+            console.log(err.response);
+            setErrors(err.response.data.errors);
+        })  
     }
 
 
@@ -37,15 +37,35 @@ const ContactUs = (props) =>{
         <div className="contact-container">
                     <Navbar/>
             <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
-    
+
                 <div className="contact-us-container">
                     <h1 className="big-text">Let's Make it Happen </h1>
                     <img src="/images/camera 3.png" alt ="camera" width="300/" height="300"/>
                     <form onSubmit={onSubmitHandler}>
                         <p>Name:</p> <input type="text" name="name"  onChange={(e) => setName(e.target.value)}/>
+                        {
+                            errors.name ?
+                                <span className="error-text">{errors.name.message}</span>
+                                : null
+                            }
                         <p>Email:</p>  <input type="text" name="email"  onChange={(e) => setEmail(e.target.value)}/>
+                        {
+                            errors.email ?
+                                <span className="error-text">{errors.email.message}</span>
+                                : null
+                        }
                         <p>Phone:</p> <input type="text" name="phone" onChange={(e) => setPhone(e.target.value)}/>
-                        <p>message:</p> <input type="textarea" name="phone"  onChange={(e) => setMessage(e.target.value)}/>
+                            {
+                            errors.phone ?
+                                <span className="error-text">{errors.phone.message}</span>
+                                : null
+                            }
+                        <p>message:</p> <input type="textarea" name="message"  onChange={(e) => setMessage(e.target.value)}/>
+                        {
+                            errors.message ?
+                                <span className="error-text">{errors.message.message}</span>
+                                : null
+                            }
                         <p> theme:</p>
                         <select  name="crewPosition" value={ theme } onChange={(e)=> setTheme(e.target.value)}>
                                                 <option value=""></option>
@@ -55,6 +75,11 @@ const ContactUs = (props) =>{
                                                     ))
                                                 }                               
                         </select>  
+                        {
+                            errors.theme ?
+                                <span className="error-text">{errors.theme.message}</span>
+                                : null
+                            }
                         <br/>
                         <input className="submit-btn" type="submit" value="Submit"/>
                     </form> 

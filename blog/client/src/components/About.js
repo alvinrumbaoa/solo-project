@@ -1,7 +1,7 @@
-import React, { useState} from 'react';
+import React from 'react';
 import  Navbar from "./Navbar";
 import {motion ,useViewportScroll} from 'framer-motion';
-import {Link, navigate } from '@reach/router';
+import {Link } from '@reach/router';
 import { animationTwo, transition,transition2,transition3} from "../animations/Animation";
 
 

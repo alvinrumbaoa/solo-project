@@ -2,13 +2,13 @@ import React from 'react';
 import axios from 'axios';
 import {navigate} from '@reach/router';
 
-const DeleteImage = (props) =>{
+const DeleteBlogs = (props) =>{
     const {id , afterDelete} = props;
     
-    const ImagedeleteHandler = (e,id) =>{
+    const BlogdeleteHandler = (e,id) =>{
         
         e.preventDefault();
-    axios.delete("http://localhost:8000/api/images/" + id)
+    axios.delete("http://localhost:8000/api/blogs/" + id)
     .then((res) =>{
         console.log(res.data);
         afterDelete(id);
@@ -20,11 +20,11 @@ const DeleteImage = (props) =>{
 }
 return(
     <div>
-        <button className="red-btn"  onClick={(e) => ImagedeleteHandler(e,id )}>DeleteImage</button>
+        <button className="red-btn"  onClick={(e) => BlogdeleteHandler(e,id )}>Remove Blog Post</button>
     </div>
 
 )
 }
 
 
-export default DeleteImage;
+export default DeleteBlogs;
