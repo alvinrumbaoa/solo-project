@@ -161,7 +161,7 @@ const Admin = (props) =>{
                                                                                 <div className="view-image" key={index}>        
                                                                                 <img src={image.imgURL} alt="images" width="200" height="200"/>
                                                                                 
-                                                                                <DeleteCustomer  id={image._id } afterDelete= {ImageAfterDelete} />
+                                                                                <DeleteImage  id={image._id } afterDelete= {ImageAfterDelete} />
                                                                                 </div> 
                                                                         ))
                                                                 }

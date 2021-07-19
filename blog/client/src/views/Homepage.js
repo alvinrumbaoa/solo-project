@@ -3,10 +3,8 @@ import Navbar from '../components/Navbar';
 import axios from 'axios';
 import {Link} from '@reach/router'
 ;import {motion } from 'framer-motion';
-import {animationOne,animationTwo, transition} from "../animations/Animation";
-import DeleteImage from '../components/DeleteImage';
+import {animationTwo, transition} from "../animations/Animation";
 
-import Admin from '../components/Admin';
 const Homepage = () =>{
     const [image, setImage] = useState([]);
 
@@ -20,15 +18,6 @@ const Homepage = () =>{
                 console.log(err);
             })
 }, [ ]);
-
-
-const afterDelete =(deletedID) =>{
-    let  filterStateArray = image.filter((image) =>{
-
-        return image._id !== deletedID;
-    });
-    setImage(filterStateArray.sort());
-    };
 
 
     return(

@@ -12,11 +12,13 @@ const Events = (props) =>{
                 <Navbar/>
                 <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
                     <h1 className="big-text">Events</h1>
-                    <div className="grid-images">
+                    <div className="grid-image">
                     {
 
                         src.map((image, idx)=>(
+                            <motion.div  whileHover={{ scale: 1.1 }}  whileTap={{ scale: 0.9 }} >
                             <img className="square-image"src={image} alt="event images" width="350" height="350"/>
+                        </motion.div>
                         ))
                     }
                     </div>

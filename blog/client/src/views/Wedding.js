@@ -5,7 +5,7 @@ import {animationOne, transition} from "../animations/Animation";
 
 
 const Wedding = (props) =>{
-    const [src] = useState(["/images/event1.jpg","/images/event2.jpg","/images/event3.jpg","/images/event4.jpg","/images/event5.jpg","/images/event6.jpg","/images/event7.jpg","/images/event8.jpg","/images/event9.jpg"]);
+    const [src] = useState(["/images/wedding1.jpg","/images/wedding2.jpg","/images/wedding3.jpg","/images/wedding4.jpg","/images/wedding5.jpg","/images/wedding6.jpg","/images/wedding7.jpg","/images/wedding8.jpg","/images/wedding9.jpg"]);
 
     return (
         <div className="categories-container">
@@ -16,7 +16,9 @@ const Wedding = (props) =>{
                     {
 
                         src.map((image, idx)=>(
+                            <motion.div  whileHover={{ scale: 1.1 }}  whileTap={{ scale: 0.9 }} >
                             <img className="square-image"src={image} alt="event images" width="350" height="350"/>
+                        </motion.div>
                         ))
                     }
                     </div>

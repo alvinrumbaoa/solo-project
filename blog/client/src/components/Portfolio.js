@@ -1,8 +1,6 @@
-import React ,{useState, useEffect} from 'react';
+import React from 'react';
 import Navbar from '../components/Navbar';
-import axios from 'axios';
 import {motion } from 'framer-motion';
-import {animationOne, transition} from "../animations/Animation";
 import { Link } from '@reach/router';
 
 const Portfolio= (props) => {

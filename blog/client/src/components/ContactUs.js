@@ -1,9 +1,7 @@
 import React, { useState} from 'react';
-import ContactUsRegistered from '../views/ContactUsRegistered';
 import axios from 'axios';
 import  Navbar from "./Navbar";
 import {motion } from 'framer-motion';
-import {navigate} from '@reach/router';
 import {animationOne, transition} from "../animations/Animation";
 const ContactUs = (props) =>{
 
@@ -20,7 +18,7 @@ const ContactUs = (props) =>{
             name: name,
             email: email,
             phone: phone,
-            message, message,
+            message: message,
             theme: theme,
         })
         .then((res) =>{

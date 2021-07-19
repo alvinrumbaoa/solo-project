@@ -5,18 +5,21 @@ import {animationOne, transition} from "../animations/Animation";
 
 
 const Newborn = (props) =>{
-        const [src] = useState(["/images/event1.jpg","/images/event2.jpg","/images/event3.jpg","/images/event4.jpg","/images/event5.jpg","/images/event6.jpg","/images/event7.jpg","/images/event8.jpg","/images/event9.jpg"]);
+        const [src] = useState(["/images/newborn.jpg","/images/newborn1.jpg","/images/newborn2.jpg","/images/newborn3.JPG","/images/newborn4.JPG","/images/newborn5.JPG","/images/newborn6.jpg","/images/newborn7.jpg","/images/newborn8.jpg"]);
 
         return (
             <div className="categories-container">
                     <Navbar/>
                     <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
                         <h1 className="big-text">Newborn</h1>
-                        <div className="grid-images">
+                        <div className="grid-image">
                         {
     
                             src.map((image, idx)=>(
-                                <img className="square-image"src={image} alt="event images" width="350" height="350"/>
+                                
+                                <motion.div  whileHover={{ scale: 1.1 }}  whileTap={{ scale: 0.9 }} >
+                                <img key={idx} className="square-image"src={image} alt="event images" width="350" height="350"/>
+                                </motion.div>
                             ))
                         }
                         </div>
