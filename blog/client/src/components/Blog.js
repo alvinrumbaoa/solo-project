@@ -35,6 +35,9 @@ const Blog = (props) =>{
                                         <img className="blog-image" src={post.coverArt} alt="cover-Art" />
                                         <hr/> 
                                         <h2 className="blog-sub-text" >{post.title}</h2>
+                                        <p> {post.createdAt !== "" ?
+                                        ((new Date(post.createdAt)).toLocaleDateString("en-us"))
+                                        : ""}</p>
                                         <hr/> 
                                         <h4 className="blog-info">{post.description}</h4>
                                 </Link>

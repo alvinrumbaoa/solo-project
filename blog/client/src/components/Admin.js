@@ -56,7 +56,7 @@ const Admin = (props) =>{
                 })
                 .then((res) =>{
                         console.log(res.data);    
-                        navigate("/home")
+                        navigate("/admin")
                 })
                 .catch(err => { 
                         console.log(err.response);
@@ -72,7 +72,7 @@ const Admin = (props) =>{
                 })
                 .then((res) =>{
                         console.log(res.data);    
-                        navigate("/home")
+                        navigate("/admin")
                 })
                 .catch(err => { 
                         console.log(err.response);
@@ -125,11 +125,19 @@ const Admin = (props) =>{
                                                                 }     
                                                                 <h3>Add Blog</h3>
                                                                 <form className ="form-container"onSubmit ={ BloghandleSubmit }>  
-                                                                <p>Title</p><input type="text" name="title" onChange ={(e) => setTitle(e.target.value)}/>  
-                                                                <p>Description</p><input type="text" name="description" onChange ={(e) => setDescription(e.target.value)}/>  
+                                                                <div className="textbox-bg">
+                                                                        <p>Title</p><input type="text" name="title" onChange ={(e) => setTitle(e.target.value)}/>  
+                                                                </div>                                                         
+                                                                <div className="textbox-bg">
+                                                                        <p>Description</p><input type="text" name="description" onChange ={(e) => setDescription(e.target.value)}/>  
+                                                                </div>
+                                                                <div className="textbox-bg">
                                                                 <p>Content</p><input type="text" name="content" onChange ={(e) => setContent(e.target.value)}/>  
-                                                                <p>Cover Art</p><input type="text" name="coverArt" onChange ={(e) => setCoverArt(e.target.value)}/>  <br/>
-                                                                <button type="submit">Add a Blog</button>
+                                                                </div>
+                                                                <div className="textbox-bg">
+                                                                <p>Cover Art</p><input type="text" name="coverArt" onChange ={(e) => setCoverArt(e.target.value)}/> 
+                                                                </div>
+                                                                <button className="red-btn" type="submit">Add a Blog</button>
                                                                 
                                                                 </form>
                                                 </div>
@@ -144,7 +152,6 @@ const Admin = (props) =>{
                                                                         <p>Themes:</p>     {getCustomer.theme}
                                                                         <DeleteCustomer  id={getCustomer._id } afterDelete= {CustomerAfterDelete}   />
                                                                         </div>
-                                                
                                                                 ))
                                                                 }
                                                 </div>                                    
@@ -154,19 +161,21 @@ const Admin = (props) =>{
                                                                 <form className ="form-container"onSubmit ={ ImagehandleSubmit }>  
                                                                 <label>Image Url: </label>
                                                                 <input type="text" name="imageURL" onChange ={(e) => setImgUrl(e.target.value)}/>  
-                                                                <button type="submit">Upload</button>
+                                                                <button className="red-btn"  type="submit">Upload</button>
                                                                 </form>
+                                                                <div className="grid-image">
                                                                 {
                                                                         image.map((image, index) => (
                                                                                 <div className="view-image" key={index}>        
-                                                                                <img src={image.imgURL} alt="images" width="200" height="200"/>
+                                                                                <img key={index} src={image.imgURL} alt="images" width="200" height="200"/>
                                                                                 
                                                                                 <DeleteImage  id={image._id } afterDelete= {ImageAfterDelete} />
                                                                                 </div> 
                                                                         ))
                                                                 }
                                                                 
-                                                                </div>
+                                                                </div>   
+                                                </div>
                                         </div>
                                 </motion.div>
                 </div>

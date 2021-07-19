@@ -11,7 +11,7 @@ const ContactUsRegistered = (props) =>{
         <div className="registered-container">
                 <Navbar/>
                 <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
-                <h1 className="big-text">Thank you ! We will contact you as soon as possible.</h1>
+                <h1 className="main-text">Thank you ! We will contact you as soon as possible.</h1>
                 <img className="success-image" src="/images/success.png" alt="successfulicon"/>
                 </motion.div>
 

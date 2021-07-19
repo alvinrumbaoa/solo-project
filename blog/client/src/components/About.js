@@ -1,13 +1,12 @@
 import React from 'react';
 import  Navbar from "./Navbar";
-import {motion ,useViewportScroll} from 'framer-motion';
+import {motion ,useViewportScroll } from 'framer-motion';
 import {Link } from '@reach/router';
 import { animationTwo, transition,transition2,transition3} from "../animations/Animation";
 
 
 const About = (props) =>{
     const { scrollYProgress } = useViewportScroll()
-
     return (
         <div className="about-container">
             <Navbar/>
@@ -17,20 +16,7 @@ const About = (props) =>{
                     <h2 className="main-text">Hello!My Name is Maica Rumbaoa. </h2> 
                     <h3 className="sub-text">I am a photographer.</h3>
                     <h4 className="info">"Me and my husband bring this idea and talent to bring a great look at your memories that will look up for many years. We serviced Orange County are but also flexible to any county around SoCal. We do photgraphy for Newborn, Maternity, Weddings and other. If you are ready to work with us. <Link to="/contactus">Let's get started"</Link></h4>
-                    <div className="social-media">
-                        <motion.div  whileHover={{ scale: 1.1 }}  whileTap={{ scale: 0.9 }} >
-                        <img src="/images/facebook.png" alt="" height="100" width="100"/>
-                        </motion.div>
-                        <motion.div  whileHover={{ scale: 1.1 }}  whileTap={{ scale: 0.9 }} >
-                        <img src="/images/pinterest.png" alt="" height="100" width="100"/>
-                        </motion.div>                            
-                        <motion.div  whileHover={{ scale: 1.1 }}  whileTap={{ scale: 0.9 }} >
-                        <img src="/images/instagram.png" alt="" height="100" width="100"/>
-                        </motion.div>
-                        <motion.div  whileHover={{ scale: 1.1 }}  whileTap={{ scale: 0.9 }} >
-                        <img src="/images/twitter (1).png" alt="" height="100" width="100"/>
-                        </motion.div>
-                    </div>
+                    
                 </div>    
                 <div className="right">
                     <img className="aboutmepic2" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/144390730_10226200545547143_7644850727001613204_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=ZIimvcULwloAX-kCJka&_nc_ht=scontent-sjc3-1.xx&oh=abc053fa605f8d4c78d65d16e9552c5d&oe=60F21934" alt="about me"/>  
@@ -77,11 +63,47 @@ const About = (props) =>{
                     </div>    
                     </motion.div>
             </div>
-            <div className="parallax"></div>
+
+            <div className="content-about"> 
+                <div className="content-wrapping">   
+                    <h3>"“When words become unclear, I shall focus with photographs. When images become inadequate, I shall be content with silence.”"</h3>
+                    <p>-— Ansel Adams</p>
+                </div>      
+            </div>
         
             <div className="parallax"></div>
-            <div className="parallax"></div>
+            <div className="social-media-container">
+                        <h1 className="main-text"> Follow me</h1>
+                        <h2 className="info">Join me in social media and stay tuned!</h2>
+            <div className="social-media">
+                        
+                        <motion.div  whileHover={{ scale: 1.1 }}  whileTap={{ scale: 0.9 }} >
+                                <a href="https://www.facebook.com/maicz.G/">
+                                    <img src="/images/facebook.png" alt="" height="100" width="100"/>
+                                </a>
+                        </motion.div>
+                        <motion.div  whileHover={{ scale: 1.1 }}  whileTap={{ scale: 0.9 }} >
+                        <a href="https://www.pinterest.com/">
+                        <img src="/images/pinterest.png" alt="" height="100" width="100"/>
+                        </a>
+                        </motion.div>                            
+                        <motion.div  whileHover={{ scale: 1.1 }}  whileTap={{ scale: 0.9 }} >
+                                <a href="https://www.instagram.com/_maics_/">
+                                    <img src="/images/instagram.png" alt="" height="100" width="100"/>
+                                </a>
+                        </motion.div>
+                        <motion.div  whileHover={{ scale: 1.1 }}  whileTap={{ scale: 0.9 }} >
+                            <a href="https://www.twitter.com">
+                                    <img src="/images/twitter (1).png" alt="" height="100" width="100"/>
+                            </a>
+                        </motion.div>
+                        
+            </div>
+
+            </div>
         </div>       
+
+        
     )
 }
 

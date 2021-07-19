@@ -20,7 +20,7 @@ const DeleteImage = (props) =>{
 }
 return(
     <div>
-        <button className="red-btn"  onClick={(e) => ImagedeleteHandler(e,id )}>DeleteImage</button>
+        <button className="red-btn-image"  onClick={(e) => ImagedeleteHandler(e,id )}>Delete Image</button>
     </div>
 
 )

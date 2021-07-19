@@ -16,7 +16,7 @@ const CustomerSchema = new mongoose.Schema({
                 minLemght: [10, "phone number should be more than 10"]
         },
         message: {type: String,
-                required: [true, "Name Requied"],
+                required: [true, "Please leave a detailed message"],
                 minLenght :[3, "characters should be at least 3 or more"]
         },
         theme: {type: String, 
