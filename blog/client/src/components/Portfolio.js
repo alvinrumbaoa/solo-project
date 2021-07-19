@@ -12,7 +12,7 @@ const Portfolio= (props) => {
                 objectFit: "cover",
         }
         const sectionStyling2={
-                backgroundImage: "url('images/model1.jpg')",
+                backgroundImage: "url('images/maica1.jpg')",
                 objectFit: "cover",
         }
         const sectionStyling3={

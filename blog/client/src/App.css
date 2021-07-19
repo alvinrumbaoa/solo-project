@@ -152,6 +152,7 @@ p:hover {
 }
 .social-media img{
   object-fit: cover;
+ 
 }
 .category-container{
   display: flex;
@@ -178,14 +179,14 @@ p:hover {
   border-radius: 10px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 200%;
+  background-size: 400%;
 }
 
 .cards>h2{
   font-family: 'Karla', sans-serif;
   font-size: 50px;
   font-weight: 500;
-  color: rgb(221, 197, 197);
+  color: rgb(255, 255, 255);
   text-shadow: #cc644a 2px 3px;
 }
 
@@ -292,8 +293,6 @@ p:hover {
     object-fit: cover;
     margin: 10rem, 10rem, 10rem, 0rem;
     border-radius:  2%;
-    width: 50%;
-    height: 100%;
     box-shadow: 5px 5px 5px 5px rgb(20, 17, 15);
     }
 
@@ -350,3 +349,38 @@ font-style: normal;
 
 }
 /* About me page */
+
+
+
+
+.cards-admin{
+  position: static;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content:center;
+  text-align: center;
+  box-shadow: 5px 5px 5px 5px rgb(20, 17, 15);
+  width: 30ch;
+  height: 30vh;
+  margin: 20px; 
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 400%;
+}
+.cards-admin>h2{
+  font-family: 'Karla', sans-serif;
+  font-size: 50px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  text-shadow: #cc644a 2px 3px;
+}
+
+
+.success-image{
+  object-fit: cover;
+  width: 75px;
+  height: 75px;
+}

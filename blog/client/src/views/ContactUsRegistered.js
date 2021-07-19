@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
 import axios from 'axios';
 import  Navbar from "../components/Navbar";
 import {motion } from 'framer-motion';
@@ -7,13 +7,13 @@ import {animationOne, transition} from "../animations/Animation";
 
 const ContactUsRegistered = (props) =>{
 
-
+   
     return (
         <div className="registered-container">
-               <Navbar/>
-              <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
-              <h1>Thank you {props.name}! We will contact you as soon as possible.</h1>
-
+                <Navbar/>
+                <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
+                <h1 className="big-text">Thank you ! We will contact you as soon as possible.</h1>
+                <img className="success-image" src="/images/success.png" alt="successfulicon"/>
                 </motion.div>
 
 

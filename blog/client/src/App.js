@@ -15,6 +15,7 @@ import Modeling from './views/Modeling';
 import Food from './views/Food';
 import ViewOneBlog from './views/ViewOneBlog';
 import {animationOne, transition} from "./animations/Animation";
+import Admin from './components/Admin'
 import './App.css';
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
             <Modeling path="/portfolio/modeling"/>
             <Food path="/portfolio/food"/>
             <ViewOneBlog path="/blogs/:id"/>
+            <Admin path="/admin"/>
         </Router>
       </motion.div>
     </div>

@@ -1,5 +1,5 @@
 import React, { useState} from 'react';
-
+import ContactUsRegistered from '../views/ContactUsRegistered';
 import axios from 'axios';
 import  Navbar from "./Navbar";
 import {motion } from 'framer-motion';
@@ -25,6 +25,7 @@ const ContactUs = (props) =>{
             .then((response) =>{
                 console.log(response.data); 
                 navigate("/submitted")
+                return <ContactUsRegistered name={name}/>;
             })
             .catch((err) => { 
                 console.log(err);
@@ -37,14 +38,14 @@ const ContactUs = (props) =>{
                     <Navbar/>
             <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
     
-                 <div className="contact-us-container">
+                <div className="contact-us-container">
                     <h1 className="big-text">Let's Make it Happen </h1>
                     <img src="/images/camera 3.png" alt ="camera" width="300/" height="300"/>
                     <form onSubmit={onSubmitHandler}>
                         <p>Name:</p> <input type="text" name="name"  onChange={(e) => setName(e.target.value)}/>
                         <p>Email:</p>  <input type="text" name="email"  onChange={(e) => setEmail(e.target.value)}/>
-                        <p>Phone:</p> <input type="text" name="phone" onChange={(e) => setEmail(e.target.value)}/>
-                        <p>message:</p> <input type="textarea" name="phone"  onChange={(e) => setEmail(e.target.value)}/>
+                        <p>Phone:</p> <input type="text" name="phone" onChange={(e) => setPhone(e.target.value)}/>
+                        <p>message:</p> <input type="textarea" name="phone"  onChange={(e) => setMessage(e.target.value)}/>
                         <p> theme:</p>
                         <select  name="crewPosition" value={ theme } onChange={(e)=> setTheme(e.target.value)}>
                                                 <option value=""></option>
