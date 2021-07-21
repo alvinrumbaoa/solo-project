@@ -263,7 +263,7 @@ p:hover {
   align-items:center;
   background-color: #d59687;
   box-shadow: 5px 5px 5px 5px rgb(20, 17, 15);
-  min-height: 100%;
+  min-height: 50vh;
   margin: 10px;
   border-radius: 20px;
 }
@@ -290,7 +290,11 @@ p:hover {
   margin: 20px;
 }
   .aboutmepic2{
+    width: 60ch;
+    height: 60vh;
     margin: 20px;
+    justify-content:center;
+    align-items:center;
     object-fit: cover;
     margin: 10rem, 10rem, 10rem, 0rem;
     border-radius:  2%;
@@ -473,7 +477,7 @@ width: 100ch;
 
 }
 .content-about h3{
-  font-size: 35px;
+  font-size: 25px;
   font-style: italic;
 }
 
@@ -502,3 +506,4 @@ width: 100ch;
   margin: 10px;
   padding: 20px;
 }
+
