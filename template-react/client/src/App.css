@@ -1,0 +1,102 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: solid 1px red; */
+
+}
+
+
+.App , .container{
+  min-height: 100vh;
+  margin: 10px;
+  text-align: center;
+  justify-content:center;
+  align-items:center;
+}
+
+
+
+.box-dashboard{
+  display:flex;
+  justify-content:center;
+  flex-direction: column;
+  align-items:center;
+  min-width:60ch;
+  min-height: 60vh;
+  border: solid 1px #cc644a;
+  background-image: url("./images/freight.jpg");
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 10.0px );
+  -webkit-backdrop-filter: blur( 10.0px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+
+main{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.d2w-logo{
+    display:flex;
+    width: 25ch;
+    height: 10vh;
+    object-fit: cover;
+
+}
+
+form input{
+  position:relative;
+  width: 40ch;
+  height: 3rem;
+  border-radius: 0.5rem;
+  padding: 10px;
+}
+
+h1{
+  position:relative;
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  font-family: Arial, Helvetica, sans;  
+  margin-bottom: 30px;
+  text-shadow: 2px 5px 4px rgb(1, 2, 4);
+}
+
+input:focus{
+  background-color: rgb(226, 115, 103);
+  border-color: rgb(130, 10, 10);
+}
+
+
+input:hover{
+  background-color: rgb(228, 114, 102);
+  border: rgb(220, 89, 89);
+}
+
+.text{
+  font-family: 'Inconsolata', monospace;
+  display: flex;
+  justify-content: left;
+}
+
+button{
+  margin: 20px;
+  font-family: 'Rubik', sans-serif;
+  color: rgb(255, 255, 255);
+  width: 25ch;
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: solid gray;
+  background: linear(45deg, #4ae491, #49aa75);
+
+button:hover{
+
+
+}
