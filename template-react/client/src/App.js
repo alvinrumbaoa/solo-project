@@ -1,21 +1,19 @@
 import React from 'react';
 import './App.css';
 import Login from './components/Login';
+import MainPage from './views/MainPage';
+import RegisterUser from './components/RegisterUser';
 import {Router} from '@reach/router';
 
 function App() {
 
 
-
-
-
-
   return (
     <div className="App">
         <Router>
-              <Login path="/lhome"/>
-              <Regitration path="/signup"/>
-
+              <Login default/>
+              <RegisterUser path="/signup"/>
+              <MainPage path="/main"/>
         </Router>
           
     </div>

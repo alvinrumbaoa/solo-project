@@ -5,17 +5,22 @@
   /* border: solid 1px red; */
 
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
 
 .App , .container{
   min-height: 100vh;
-  margin: 10px;
   text-align: center;
   justify-content:center;
   align-items:center;
 }
 
-
+.dark-mode{
+  background-color: #0d1117; 
+  min-height: 100vh;
+  text-align: center;
+  justify-content:center;
+  align-items:center;
+}
 
 .box-dashboard{
   display:flex;
@@ -30,11 +35,12 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 10.0px );
-  -webkit-backdrop-filter: blur( 10.0px );
-  border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  box-shadow: 0 8px 25px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 16.0px );
+  -webkit-backdrop-filter: blur( 16.0px );
+  border-radius: 5px;
+  padding: 20px;
+  border: 2px solid rgba( 255, 255, 255, 0.18 );
 }
 
 
@@ -60,43 +66,65 @@ form input{
   padding: 10px;
 }
 
-h1{
+select{
   position:relative;
-  font-family: 'Rubik', sans-serif;
+  width: 40ch;
+  height: 3rem;
+  border-radius: 0.5rem;
+  padding: 10px;
+}
+
+.big-text{
+  position:relative;
+  font-family: 'Mulish', sans-serif;
   color: white;
-  font-family: Arial, Helvetica, sans;  
   margin-bottom: 30px;
   text-shadow: 2px 5px 4px rgb(1, 2, 4);
 }
 
+.error-text{
+  color: rgb(199, 14, 14);
+  font-family: 'Mulish', sans-serif;
+  display: flex;
+  justify-content: left;
+  font-weight: 500;
+}
+
 input:focus{
-  background-color: rgb(226, 115, 103);
+  background-color: rgb(228, 183, 179);
   border-color: rgb(130, 10, 10);
 }
 
 
 input:hover{
-  background-color: rgb(228, 114, 102);
-  border: rgb(220, 89, 89);
+  background-color: rgb(221, 154, 146);
+  border-color: rgb(130, 10, 10);
 }
 
 .text{
-  font-family: 'Inconsolata', monospace;
+  color: rgb(255, 255, 255);
+  font-family: 'Mulish', sans-serif;
   display: flex;
   justify-content: left;
+  font-weight: 700;
+  text-shadow: 1px 4px 2px  #000;
 }
+
 
 button{
   margin: 20px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Mulish', sans-serif;
   color: rgb(255, 255, 255);
   width: 25ch;
   height: 3rem;
   border-radius: 0.5rem;
   border: solid gray;
-  background: linear(45deg, #4ae491, #49aa75);
-
+ color: rgba(255, 255, 255, 0.96);
+ background: #1a5cc0;
+ box-shadow:  2px 5px 4px black;
+}
 button:hover{
-
-
+  border: 3px solid #1a5cc0;
+  background: #d4dfee;
+  color: rgb(7, 4, 4);
 }
