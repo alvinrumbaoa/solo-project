@@ -2,6 +2,8 @@ import React ,{useState} from 'react';
 import {motion} from 'framer-motion';
 import { animationOne, transition} from '../animations/Animation';
 import axios from 'axios';
+import {Link, navigate} from '@reach/router';
+
 
 const RegisterUser =(props) =>{
 
@@ -60,11 +62,17 @@ const register = e => {
 return (
     <div className="container">
         <nav>
-                <img className="d2w-logo"src="D2W.PNG"  alt="d2w-logo"/>
+            <Link to="/">
+            <img className="d2w-logo"src="D2W.PNG"  alt="d2w-logo"/>
+            </Link>
         </nav>  
         <main>
+            <div className="blob"> <img src="/images/business.png" alt="blob" width="600" height="600"/> 
+            <h1 className="main-text">Welcome to D2W Logistics</h1>
+            </div>
             <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
                 <div className="box-dashboard">
+                <img src="/images/signup.png" alt="ship-logo" width="75" height="75"/>  
                         <h1 className="big-text">Register</h1>
                 {
                     confirmReg ? 

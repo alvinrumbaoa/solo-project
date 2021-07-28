@@ -36,11 +36,12 @@ return (
             </Link>
         </nav>  
         <main>
+        <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
         <div className="blob"> <img src="/images/business.png" alt="blob" width="600" height="600"/> 
         <h1 className="main-text">Welcome to D2W Logistics</h1>
         </div>
-            <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
-                <div className="box-dashboard">       
+        
+        <div className="box-dashboard">       
                 <img src="/images/ship.png" alt="ship-logo" width="75" height="75"/>                    
                 <h1 className="big-text">Sign In</h1>
                     <p className="error-text">{errorMessage ? errorMessage : ""}</p>

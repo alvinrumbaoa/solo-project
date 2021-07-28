@@ -4,6 +4,7 @@ import Login from './components/Login';
 import MainPage from './views/MainPage';
 import RegisterUser from './components/RegisterUser';
 import {Router} from '@reach/router';
+import Confirmation from './views/Confirmation';
 
 function App() {
 
@@ -11,9 +12,10 @@ function App() {
   return (
     <div className="App">
         <Router>
-              <Login default/>
+              <Login path="/"/>
               <RegisterUser path="/signup"/>
               <MainPage path="/main"/>
+              <Confirmation path="/success"/>
         </Router>
           
     </div>
