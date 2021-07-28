@@ -1,5 +1,5 @@
-import React ,{useState, useEffect} from 'react';
-import { Link } from '@reach/router';
+import React ,{useState} from 'react';
+import { Link, navigate } from '@reach/router';
 import {motion} from 'framer-motion';
 import axios from 'axios';
 import { animationOne, transition} from '../animations/Animation';
@@ -12,17 +12,10 @@ const Login =(props) =>{
 
     const login = (event) => {
         event.preventDefault();
-        axios
-        .post(
-            "http://localhost:8000/api/users/login",
-            {
+        axios.post("http://localhost:8000/api/users/login", {
             email: email,
             password: password,
-            },
-            {
-            withCredentials: true,
-            }
-        )
+        },  { withCredentials: true,} )
         .then((res) => {
             console.log(res.cookie);
             console.log(res);
@@ -38,12 +31,18 @@ const Login =(props) =>{
 return (
     <div className="container">
         <nav>
+            <Link to="/">
             <img className="d2w-logo"src="D2W.PNG"  alt="d2w-logo"/>
+            </Link>
         </nav>  
         <main>
+        <div className="blob"> <img src="/images/business.png" alt="blob" width="600" height="600"/> 
+        <h1 className="main-text">Welcome to D2W Logistics</h1>
+        </div>
             <motion.div initial="out" animate="in" exit="out" variants={animationOne} transition={transition}>
                 <div className="box-dashboard">       
-                    <h1 className="big-text">Sign In</h1>
+                <img src="/images/ship.png" alt="ship-logo" width="75" height="75"/>                    
+                <h1 className="big-text">Sign In</h1>
                     <p className="error-text">{errorMessage ? errorMessage : ""}</p>
                     <form onSubmit={login}>
                         <div>
