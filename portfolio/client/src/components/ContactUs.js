@@ -6,13 +6,7 @@ const ContactUs = () =>{
 
     return(
         <div>
-            <h1>Logo here</h1>
-
-            <ul>
-                <li>About</li>
-                <li>My Works</li>
-                <li>Contact Me</li>
-            </ul>
+            <h1>Contact Us</h1>
         </div>
     )
 }

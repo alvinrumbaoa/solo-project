@@ -1,16 +1,15 @@
 import React from 'react';
 
-const MyWorks = () =>{
+const About = () =>{
 
 
 
     return(
         <div>
-            <h1>Portfolio</h1>
-
+            <h1>About Me</h1>
         </div>
     )
 }
 
 
-export default MyWorks;
+export default Navbar;
