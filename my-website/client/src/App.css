@@ -10,7 +10,6 @@ html{
 }
 
 body{
-
     margin: 0 auto;
     padding: 0;
     min-height:  100vh;
@@ -20,6 +19,7 @@ body{
 *::before,
 *::after{
   box-sizing: inherit;
+  /* border: 1px solid lightcoral; */
   font-family: 'Poppins', sans-serif;
 }
 
@@ -32,13 +32,14 @@ body{
   line-height:  1rem;
   overflow: hidden;
   margin-bottom: 0.5rem;
-  background-color: #A4A4A4;
+  background-color: #F4FEC1;
 }
-
+.logo{
+  text-shadow: 2px 6px 2px rgba(0,0,0,0.2);
+}
 .logo, .nav-menu{
   text-transform: uppercase;
 }
-
 .nav-menu{
   list-style: none;
   display: flex;
@@ -53,6 +54,7 @@ body{
 .list-item{
   flex: 1 0 40%;
   text-align: center;
+  font-size: 1.1rem;
 }
 
 .logo a, .nav-menu a{
@@ -60,15 +62,15 @@ body{
   text-decoration: none;
   letter-spacing: 0.2rem;
   padding: 0.8rem;
+  color:#712F79;
 }
 
 .logo{
-  color: #7809d6;
-  font-family: 'Cairo', sans-serif;
+  color: #9882AC;
 }
 
 .nav-menu a:hover{
-    background-color:rgb(162, 62, 172);
+    background-color: #9D0AFF;
     transform: scale(1.1);
     color: white;
 }
@@ -78,31 +80,90 @@ body{
 }
 
 /* Homepage */
-
-.homepage-container{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+span{
+  color: #4C4C9D;
 }
-
+.homepage-container{
+  min-height: 70vh;
+  display: flex;
+  flex-direction: row;
+}
 .main-text{
   position:relative;
   font-size: 55px;
-  font-family: 'Cairo', sans-serif;
+}
+
+.homepage{
+  width: 50%;
+  flex-direction: column;
+ 
 }
 
 
+.homepage-image{
+  position: inherit;
+  width: 50%;
+  flex-direction: column;
+}
 
+/* Skills Section */
+.skills-section{
+  min-height: 100vh;
+  background-color: #FFE4F3;
+  padding:10px;
+  color: #595758;
+}
+.skills-section h1{
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  text-align: center;
+}
 
+.skill-card-wrapper{
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items:center;
+  margin: 10px;
+}
 
+.skill-cards{
+    position: inherit;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    width: 35ch;
+    height: 60vh;
+    margin: 10px;
+    padding:  30px;
+    flex-direction: column;
+    background: rgba( 255, 255, 255, 0.05 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3.0px );
+    -webkit-backdrop-filter: blur( 3.0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 
+}
+.skill-cards h3{
+  display: flex;
+  text-align: center;
+  justify-content: flex-start;
+}
 
+.icons{
+  justify-content: center;
+  align-items:center;
+  display: flex;
+  flex-flow: wrap;
+  flex-shrink: inherit;
+}
+.icons img{
+  margin: 10px;
+}
 
-
-@media screen and (min-width:100px){
+@media screen and (min-width:10px){
   .header-container{
     line-height: 0.5rem;
 }
@@ -113,15 +174,26 @@ body{
     flex: 1 0 10%;
 }
   .homepage-container{
+
+    flex-direction: column;
     text-align: center;
+    justify-content:center;
+    align-content:center;
+    align-items: center;
     font-size: 8px;
   }
-  .homepage-container img{
-    width:30%;
+
+  .homepage-image{
+    text-align: center;
+    display: flex;
+    justify-content:center;
+    align-content:center;
+    width: 30%;
     height: 30%;
-}  
+  }
+
   .main-text{
-    font-size: 30px;
+    font-size: 20px;
   }
   .logo{
     font-size: 10px;
@@ -143,15 +215,21 @@ body{
           flex: 1 0 10%;
       }
       .homepage-container{
-        text-align: center;
+        flex-direction: column;
+        justify-content:center;
+        align-content:center;
+        align-items: center;
         font-size: 10px;
       }
-      .homepage-container img{
-          width:40%;
-          height: 40%;
-      }  
+      .homepage-image{
+        text-align: center;
+        justify-content:center;
+        align-content:center;
+        width: 40%;
+        height: 40%;
+      }
       .main-text{
-        font-size: 30px;
+        font-size: 20px;
       }
       .logo{
         font-size: 20px;
@@ -172,16 +250,30 @@ body{
       margin: 0 0 0 0.3rem;
  
     }
-    .homepage-container{
-      justify-content: space-between;
-      text-align: center;
-      font-size: 20px;
-    }
-    .homepage-container img{
-      width:30%;
-      height: 30%;
-  }  
     .main-text{
-      font-size: 50px;
+      font-size: 40px;
+      line-height: 3rem;
+      }
+    .homepage-container{
+      margin: 1rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      
     }
+    .homepage{
+      text-align: left;
+      width: 50%;
+      flex-direction: column;
+    }
+    .homepage-image img{
+        text-align: center;
+        justify-content:center;
+        align-content:center;
+        margin-left: 10rem;
+        width: 300px;
+        height: 400px;
+    } 
+
+
   }
