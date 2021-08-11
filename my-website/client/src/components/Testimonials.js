@@ -1,12 +1,13 @@
 import React from 'react';
-import Avatar from 'avataaars';
 
 const Testimonials = (props) => {
 
     return(
         <div className= "container">
-            <div
+            <div className="carousel-container">
                 <h1>Testimonials</h1>
+
+            </div>
         </div>
     )
 }
