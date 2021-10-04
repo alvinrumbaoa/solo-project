@@ -19,7 +19,7 @@ const About = (props) =>{
                     
                 </div>    
                 <div className="right">
-                    <img className="aboutmepic2" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t1.6435-9/144390730_10226200545547143_7644850727001613204_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=ZIimvcULwloAX-kCJka&_nc_ht=scontent-sjc3-1.xx&oh=abc053fa605f8d4c78d65d16e9552c5d&oe=60F21934" alt="about me"/>  
+                    <img className="aboutmepic2" src="https://scontent-lax3-2.xx.fbcdn.net/v/t1.6435-9/31183543_10216912672196114_2818224953994772480_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=174925&_nc_ohc=gRev_eM3Ty0AX99-Vf2&_nc_ht=scontent-lax3-2.xx&oh=4d81cbb7c9738787c9b9197dfa3bc2b9&oe=6180E417" alt="about me"/>  
                 </div>
             </div>
             

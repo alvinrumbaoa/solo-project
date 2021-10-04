@@ -50,20 +50,21 @@ const Admin = (props) =>{
 
 
         const ImagehandleSubmit =(e) =>{
-                e.preventDefault();
+                // e.preventDefault();
                         axios.post("http://localhost:8000/api/images", {
                         imgURL: imageUrl,
                 })
                 .then((res) =>{
                         console.log(res.data);    
-                        navigate("/admin")
+                   
                 })
                 .catch(err => { 
                         console.log(err.response);
-                })     
+                })   
+                navigate("/admin");  
         }
         const BloghandleSubmit =(e) =>{
-                e.preventDefault();
+                // e.preventDefault();
                         axios.post("http://localhost:8000/api/blogs", {
                         title: title,
                         description:description,
@@ -72,11 +73,12 @@ const Admin = (props) =>{
                 })
                 .then((res) =>{
                         console.log(res.data);    
-                        navigate("/admin")
+                       
                 })
                 .catch(err => { 
                         console.log(err.response);
-                })     
+                })    
+                navigate("/admin"); 
         }
 
 
@@ -159,9 +161,9 @@ const Admin = (props) =>{
                                                 
                                                                 <h2>Upload Images</h2>
                                                                 <form className ="form-container"onSubmit ={ ImagehandleSubmit }>  
-                                                                <label>Image Url: </label>
-                                                                <input type="text" name="imageURL" onChange ={(e) => setImgUrl(e.target.value)}/>  
-                                                                <button className="red-btn"  type="submit">Upload</button>
+                                                                        <label>Image Url: </label>
+                                                                        <input type="text" name="imageURL" onChange ={(e) => setImgUrl(e.target.value)}/>  
+                                                                        <button className="red-btn" type="submit">Upload</button>
                                                                 </form>
                                                                 <div className="grid-image">
                                                                 {
