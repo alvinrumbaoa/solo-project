@@ -19,7 +19,6 @@ const About = (props) =>{
                     
                 </div>    
                 <div className="right">
-                    <img className="aboutmepic2" src="https://scontent-lax3-2.xx.fbcdn.net/v/t1.6435-9/31183543_10216912672196114_2818224953994772480_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=174925&_nc_ohc=gRev_eM3Ty0AX99-Vf2&_nc_ht=scontent-lax3-2.xx&oh=4d81cbb7c9738787c9b9197dfa3bc2b9&oe=6180E417" alt="about me"/>  
                 </div>
             </div>
             
@@ -73,7 +72,7 @@ const About = (props) =>{
         
             <div className="parallax"></div>
             <div className="social-media-container">
-                        <h1 className="main-text"> Follow me</h1>
+                        <h1 className="sub-text"> Follow me</h1>
                         <h2 className="info">Join me in social media and stay tuned!</h2>
             <div className="social-media">
                         
